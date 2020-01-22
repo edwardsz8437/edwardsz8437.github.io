@@ -1,26 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
+
 <head>
-<style>
-h1 {
-  color: blue;
-  font-family: verdana;
-  font-size: 300%;
-}
-p  {
-  color: red;
-  font-family: courier;
-  font-size: 160%;
-}
-<iframe src="demo_iframe.htm" style="border:none;"></iframe>
-</style>
+  <meta charset="utf-8">
+  <title>Zack Edwards</title>
+  <link rel="stylesheet" href="https://use.typekit.net/nqq8pvr.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/home.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">.
 </head>
+
 <body>
-<button>Click me</button>
-<iframe src="URL"></iframe>
-<h1>This is a heading</h1>
-<p>This is a paragraph.</p>
-<a href="https://www.linkedin.com/in/zackery-e/">This is a link</a>
+<div class="name"><a href="./index.html"><h1>Zack Edwards</h1></a></div>
+  <div class="head">
+
+
+    <div class="nav">
+      <ul>
+        <li><a href="#zack">About</a></li>
+        <li><a href="#featured">Stuff</a></li>
+        <li><a href="#gallery">All</a></li>
+        <li><a href="" target="_blank">Resume</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="about">
+    I'm a San Diego native on a gap year before starting at Stanford University in the fall of 2020. <a style="font-size: 14px" href="#zack">read more</a><br>
+    <a style="font-size: 14px" href="https://www.linkedin.com/in/zackery-e/" target="_blank">linkedin</a>  
+     <!-- <a style="font-size: 14px" href="./skillprint/skillprint.html" target="_blank">skillprint</a> -->
+  </div>
+
+  <div id="featured" class="splash v1" style="background-image: url('./img/del/del-splash2.png'); background-position: center; background-repeat: no-repeat; background-size: cover;">
+    <div class="content adapt">
+      <div class="grid-two">
+        <div style ="padding-right: 20px">
+          <img style="width: 50%; padding:15px 0;" src="./img/del/del-logo.png">
+          <p>Musical Adventures</p>
+          <p>I've been playing bassoon for six years and love performing with various ensembles and as a soloist. Check out my music resume!</p>
+          <a href="./html/del.html">
+            <div class="btn">music resume</div>
+          </a>
+          <div class="tags">
+            <div class="tag">Music</div>
+            <div class="tag">Bassoon</div>
+            <div class="tag">Arts</div>
+          </div>
+        </div>
+        <div>
+          <!-- <img src ="./img/del-splash.png"> -->
+        </div>
+
+      </div>
+    </div>
+  </div>
 
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
 </html>
